@@ -1,7 +1,7 @@
 #include "kallib.h"
 
-int main()
+int main(int argc, char const *argv[])
 {
-	kal_putstr("hello world 1234568890@+-=:^/{}_[]!?;.,'");
-	return (0);
+	kal_putnbr(-245122222222222222);
+	return 0;
 }

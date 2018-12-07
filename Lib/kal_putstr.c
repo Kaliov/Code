@@ -1,3 +1,5 @@
+#include "kallib.h"
+
 int kal_putstr(char *str)
 {
 	int j = 0;

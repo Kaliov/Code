@@ -1,6 +1,6 @@
-#include <kallib.h>
+#include "kallib.h"
 
-int kal_putstr(char *str)
+void kal_putstr(char *str)
 {
 	int j = 0;
 	
@@ -9,5 +9,4 @@ int kal_putstr(char *str)
 		kal_putchar(str[j]);
 		j++;
 	}
-	return(0);
 }
