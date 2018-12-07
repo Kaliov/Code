@@ -2,6 +2,9 @@
 
 int main(int argc, char const *argv[])
 {
-	kal_putnbr(-245122222222222222);
+	char *str = "bonjour";
+
+	kal_putnbr(kal_strlen(str));
+	
 	return 0;
 }

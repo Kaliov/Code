@@ -6,4 +6,4 @@ void kal_putstr(char *str);
 
 void kal_putnbr(intmax_t nb);
 
-int kal_strlen(char *str);
+intmax_t kal_strlen(char *str);
