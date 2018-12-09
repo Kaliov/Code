@@ -9,3 +9,5 @@ void kal_putnbr(intmax_t nb);
 intmax_t kal_strlen(char *str);
 
 intmax_t kal_atoi(char *str);
+
+intmax_t kal_power(intmax_t a, size_t n);

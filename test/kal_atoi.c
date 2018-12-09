@@ -3,21 +3,23 @@
 
 intmax_t kal_atoi(char *str)
 {
-	int i = 0;
+	size_t i = 0;
+	intmax_t x = 0;
+	intmax_t neg = 0;
 
-	while (str[i] != '\0')
-	{
-		if(str[i] == 45 || ('0' <= str[i] && str[i] <= '9'))
-		{
-			if(str[i] == 45 && ('0' <= str[i + 1] && str[i + 1] <= '9'))
-			{
-				kal_putchar('-');
-				i++;
-			}
-			kal_putnbr(str[i] - '0');
-		}
-		kal_putnbr('0');
+	if(str[i] != '-' && ((str[i] < '0') || (str[i] > '9')))
 		return(0);
+	if(str[i] == '-' && ((str[i + 1] >= '0') && (str[i + 1] <= '9')))
+	{
+		neg = 1;
+		i++;
 	}
-	return(0);
+	while(str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
+	{
+		x = (str[i] - '0') + x * 10;
+		i++;
+	}
+	if(neg == 1)
+		x = -x;
+	return(x);
 }
