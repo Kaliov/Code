@@ -3,10 +3,10 @@
 
 int main(int argc, char const *argv[])
 {
-	char *str = "115boen2j3o4ur5";
+	char *str = "123zbc";
 
-	kal_putnbr(kal_atoi(str));
+	kal_atoi(str);
 	kal_putchar('\n');
-	kal_putnbr(atoi(str));	
+	atoi(str);	
 	return(0);
 }
