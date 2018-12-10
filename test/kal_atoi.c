@@ -1,5 +1,6 @@
 #include "kallib.h"
 #include <inttypes.h>
+#include <stdlib.h>
 
 intmax_t kal_atoi(char *str)
 {

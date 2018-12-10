@@ -7,14 +7,14 @@
 int main ()
 {
 	int val = 0;
-	int i = 32;
+	int i = -254;
 	char *str;
 //	char str[10] = "123tu*";
 
-	while (i != 126)
+	while (i != 200)
 	{
 
-		str = itoa(i);
+		str = kal_itoa(i);
 		val = atoi(str);
 		kal_putnbr(val);
 		kal_putstr(" atoi / kal ");
@@ -24,5 +24,6 @@ int main ()
 		free(str);
 		i++;
 	}
+	kal_putnbr(-15);
 	return(0);
 }

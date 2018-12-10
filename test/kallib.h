@@ -1,4 +1,9 @@
+#ifndef KALLIB_H
+# define KALLIB_H
+
 #include <inttypes.h>
+#include <string.h>
+#include <stdlib.h>
 
 void kal_putchar(char c);
 
@@ -11,3 +16,9 @@ intmax_t kal_strlen(char *str);
 intmax_t kal_atoi(char *str);
 
 intmax_t kal_power(intmax_t a, size_t n);
+
+char *kal_itoa(intmax_t x);
+
+size_t kal_nbrlen(intmax_t nb);
+
+#endif
