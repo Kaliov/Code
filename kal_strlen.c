@@ -1,7 +1,7 @@
 #include "kallib.h"
 #include <inttypes.h>
 
-intmax_t kal_strlen(char *str)
+intmax_t kal_strlen(const char *str)
 {
 	int j = 0;
 

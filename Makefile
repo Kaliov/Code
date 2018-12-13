@@ -21,7 +21,7 @@ $(NAME) :
 
 clean :
 	@ rm -f *.o
-	@ echo -e "$(_GREEN)Clear"
+	@ echo -e "$(_GREEN)Clear$(_WHITE)"
 
 fclean : clean
 	@ rm -f $(NAME)
@@ -32,4 +32,4 @@ test : re
 	@ $(CC) -o test.out main.c $(NAME)
 	@ ./test.out
 	@ rm -f test.out
-	@ echo -e "\n$v(_CYAN)Test end"
+	@ echo -e "\n$(_CYAN)Test end$(_WHITE)"

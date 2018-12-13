@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "kallib.h"
-#include <stdlib.h>
-
 #include "kallib.h"
 
 int	*wordslen(char	*str, size_t wordnbr)
@@ -38,22 +32,25 @@ int	*wordslen(char	*str, size_t wordnbr)
 	return(tabint);
 }
 
-int main ()
+char **kal_split_whitespaces(const char *str)
 {
-	char	*str1 = " 54 wer erg\tewg\newf ge\t \nfwefw";
+	char	**s;
 	size_t	i;
 	size_t	j;
-	int		*k;
+	size_t	x;
 
-	i = kal_wordnbr(str1);
+	i = 0;
 	j = 0;
-	k = wordslen(str1, i);
+	x = kal_wordnbr(str);
+	*s = kal_strnew(x + 1);
 
-	while(k[j] != '\0')
+	while(str[i] != '\0')
 	{
-		kal_putnbr(k[j]);
-		kal_putstr("\n");
-		j++;
+		while((str[i] != '\t' && str[i] != '\n') && str[i] != ' ')
+		{
+			s[j][i] = str[i];
+			i++;
+		}
+		i++;
 	}
-	return(0);
 }
