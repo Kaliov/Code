@@ -1,6 +1,6 @@
 CC = gcc -Wall -Wextra -Werror
-KALFUNC = kal_*.c
-NAME =	libkal.a
+KALFUNC = kl_*.c
+NAME =	libkl.a
 KALOBJ =	*.o
 _RED = \x1b[31m
 _GREY = \x1b[30m
@@ -30,6 +30,6 @@ re : fclean all
 
 test : re 
 	@ $(CC) -o test.out main.c $(NAME)
-	@ ./test.out
+	@ ./test.out | cat -e
 	@ rm -f test.out
 	@ echo -e "\n$(_CYAN)Test end$(_WHITE)"
